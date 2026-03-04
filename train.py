@@ -16,7 +16,7 @@ from sklearn.metrics import ConfusionMatrixDisplay, confusion_matrix
 import skops.io as sio
 
 # loading the data
-bank_df = pd.read_csv(r"churn_data\\train.csv", index_col="id", nrows=1000)
+bank_df = pd.read_csv("train.csv", index_col="id", nrows=1000)
 bank_df = bank_df.drop(["CustomerId", "Surname"], axis=1)
 bank_df = bank_df.sample(frac=1)
 
